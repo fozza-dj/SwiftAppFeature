@@ -14,8 +14,10 @@ struct MenuDetailItem: View {
         VStack {
             ZStack(alignment: .bottomTrailing) {
                 Image(item.mainImage)
+                    .resizable()
+                    .scaledToFit()
                 Text("Photo: \(item.photoCredit)")
-                    .padding(40)
+                    .padding(4)
                     .background(.black)
                     .font(.caption)
                     .foregroundStyle(.white)

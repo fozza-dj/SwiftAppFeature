@@ -22,6 +22,9 @@ struct MenuItemRow: View {
                 }
             }
         }
+        .navigationDestination(for: MenuItem.self) { item in
+            MenuDetailItem(item: item)
+        }
         
     }
 }
