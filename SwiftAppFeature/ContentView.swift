@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("Tab 1")
+            MenuView()
                 .tabItem {
-                    Label("Tab 1", systemImage: "1.circle")
+                    Label("Menu", systemImage: "list.dash")
                 }
-            Text("Tab 2")
+            OrderView()
                 .tabItem {
-                    Label("Tab 2", systemImage: "1.circle")
+                    Label("Order", systemImage: "square.and.pencil")
                 }
         }
     }
@@ -24,4 +24,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(Order())
 }

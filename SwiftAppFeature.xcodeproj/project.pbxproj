@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A01EA23A3E7564C57F866439 /* Pods_SwiftAppFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE944378C5FD95F325B10B9 /* Pods_SwiftAppFeature.framework */; };
-		B46B54D82C19FA300089A3A4 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B54642C19FA300089A3A4 /* Order.swift */; };
 		B46B54D92C19FA300089A3A4 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = B46B54652C19FA300089A3A4 /* menu.json */; };
 		B46B54DA2C19FA300089A3A4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B54662C19FA300089A3A4 /* Helper.swift */; };
 		B46B54DB2C19FA300089A3A4 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46B54672C19FA300089A3A4 /* Menu.swift */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		7BE944378C5FD95F325B10B9 /* Pods_SwiftAppFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAppFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B854F9BF859E2BEA6D5F3EE /* Pods-SwiftAppFeature.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppFeature.release.xcconfig"; path = "Target Support Files/Pods-SwiftAppFeature/Pods-SwiftAppFeature.release.xcconfig"; sourceTree = "<group>"; };
-		B46B54642C19FA300089A3A4 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		B46B54652C19FA300089A3A4 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		B46B54662C19FA300089A3A4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B46B54672C19FA300089A3A4 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -38,6 +36,21 @@
 		B4F627832C2487CB00A0D0CC /* MenuDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailItem.swift; sourceTree = "<group>"; };
 		BAAD31B61B3C95E7914FB501 /* Pods-SwiftAppFeature.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAppFeature.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAppFeature/Pods-SwiftAppFeature.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B4FA171A2C63A7B2007FDE26 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Order.swift,
+				OrderView.swift,
+			);
+			target = B4E44BAA2C04EEEA00FB9AC9 /* SwiftAppFeature */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B4FA17182C63A75D007FDE26 /* Order */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B4FA171A2C63A7B2007FDE26 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Order; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B4E44BA82C04EEEA00FB9AC9 /* Frameworks */ = {
@@ -59,15 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B46B53F22C19FA300089A3A4 /* idine */ = {
+		B46B53F22C19FA300089A3A4 /* idineData */ = {
 			isa = PBXGroup;
 			children = (
-				B46B54642C19FA300089A3A4 /* Order.swift */,
 				B46B54652C19FA300089A3A4 /* menu.json */,
 				B46B54662C19FA300089A3A4 /* Helper.swift */,
 				B46B54672C19FA300089A3A4 /* Menu.swift */,
 			);
-			path = idine;
+			path = idineData;
 			sourceTree = "<group>";
 		};
 		B4E44BA22C04EEEA00FB9AC9 = {
@@ -91,8 +103,9 @@
 		B4E44BAD2C04EEEA00FB9AC9 /* SwiftAppFeature */ = {
 			isa = PBXGroup;
 			children = (
-				B4F6277E2C1F40DA00A0D0CC /* Example */,
-				B46B53F22C19FA300089A3A4 /* idine */,
+				B4FA17182C63A75D007FDE26 /* Order */,
+				B4F6277E2C1F40DA00A0D0CC /* Menu */,
+				B46B53F22C19FA300089A3A4 /* idineData */,
 				B4E44BAE2C04EEEA00FB9AC9 /* SwiftAppFeatureApp.swift */,
 				B4E44BB02C04EEEA00FB9AC9 /* ContentView.swift */,
 				B4E44BB22C04EEEB00FB9AC9 /* Assets.xcassets */,
@@ -109,14 +122,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B4F6277E2C1F40DA00A0D0CC /* Example */ = {
+		B4F6277E2C1F40DA00A0D0CC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				B4F6277F2C1F417100A0D0CC /* MenuView.swift */,
 				B4F627812C1F492B00A0D0CC /* MenuItemRow.swift */,
 				B4F627832C2487CB00A0D0CC /* MenuDetailItem.swift */,
 			);
-			path = Example;
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		D1909B9170A13F084FE508CE /* Pods */ = {
@@ -226,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F627822C1F492B00A0D0CC /* MenuItemRow.swift in Sources */,
-				B46B54D82C19FA300089A3A4 /* Order.swift in Sources */,
 				B4E44BB12C04EEEA00FB9AC9 /* ContentView.swift in Sources */,
 				B4E44BAF2C04EEEA00FB9AC9 /* SwiftAppFeatureApp.swift in Sources */,
 				B46B54DA2C19FA300089A3A4 /* Helper.swift in Sources */,

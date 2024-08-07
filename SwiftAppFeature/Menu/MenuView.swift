@@ -12,18 +12,23 @@ struct MenuView: View {
     "menu.json")
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(menu) { section in
-                    Section(header: Text(section.name)) {
+                    Section(section.name) {
                         ForEach(section.items) { item in
-                            MenuItemRow(item: item)
+                            NavigationLink(value: item) {
+                                MenuItemRow(item: item)
+                            }
                         }
                     }
                 }
             }
+            .navigationDestination(for: MenuItem.self) { item in
+                MenuDetailItem(item: item)
+            }
             .navigationTitle("Menu")
-            .listStyle(GroupedListStyle())
+            .listStyle(.grouped)
         }
     }
 }
